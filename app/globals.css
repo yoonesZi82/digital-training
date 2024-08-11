@@ -110,6 +110,7 @@ fieldset::-webkit-scrollbar-thumb {
     justify-content: space-between;
     align-items: center;
     max-width: 100%;
+    gap: 16px;
   }
 
   @keyframes fadeInDownBig {
