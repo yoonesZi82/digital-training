@@ -4,7 +4,7 @@
 
 :root {
   --normal-blue: #272c85;
-  --normal-yellow: #fdebec;
+  --normal-white: #fdebec;
   --border-new-box-color: #9f2042;
 }
 
@@ -19,14 +19,14 @@
 }
 
 body {
-  background: var(--normal-yellow);
+  background: var(--normal-white);
 }
 /* style scrollbar for body */
 body::-webkit-scrollbar {
   width: 10px !important;
 }
 body::-webkit-scrollbar-track {
-  background: var(--normal-yellow);
+  background: var(--normal-white);
   border-radius: 3px;
 }
 body::-webkit-scrollbar-thumb {
@@ -41,7 +41,7 @@ body::-webkit-scrollbar-thumb {
   width: 10px !important;
 }
 .ant-drawer-body::-webkit-scrollbar-track {
-  background: var(--normal-yellow);
+  background: var(--normal-white);
   border-radius: 3px;
 }
 .ant-drawer-body::-webkit-scrollbar-thumb {
@@ -56,7 +56,7 @@ body::-webkit-scrollbar-thumb {
   width: 10px !important;
 }
 .ant-menu-sub::-webkit-scrollbar-track {
-  background: var(--normal-yellow);
+  background: var(--normal-white);
   border-radius: 3px;
 }
 .ant-menu-sub::-webkit-scrollbar-thumb {
@@ -71,7 +71,7 @@ fieldset::-webkit-scrollbar {
   width: 10px !important;
 }
 fieldset::-webkit-scrollbar-track {
-  background: var(--normal-yellow);
+  background: var(--normal-white);
   border-radius: 3px;
 }
 fieldset::-webkit-scrollbar-thumb {
@@ -192,12 +192,12 @@ fieldset::-webkit-scrollbar-thumb {
   background: var(--normal-blue) !important;
 }
 .ant-input-search-button {
-  background: var(--normal-yellow) !important;
+  background: var(--normal-white) !important;
   color: var(--normal-blue) !important;
 }
 
 .anticon-ellipsis > svg {
-  color: var(--normal-yellow) !important;
+  color: var(--normal-white) !important;
 }
 
 /* drawer style */
@@ -235,7 +235,7 @@ fieldset::-webkit-scrollbar-thumb {
     width: 0%;
     height: 2px;
     display: block;
-    background-color: var(--normal-yellow);
+    background-color: var(--normal-white);
     content: " ";
     position: absolute;
     bottom: -4px;
@@ -245,13 +245,13 @@ fieldset::-webkit-scrollbar-thumb {
   }
 
   &:hover {
-    color: var(--normal-yellow);
+    color: var(--normal-white);
 
     &::after {
       width: 20%;
       height: 2px;
       display: block;
-      background-color: var(--normal-yellow);
+      background-color: var(--normal-white);
       content: " ";
       position: absolute;
       bottom: -4px;
@@ -261,3 +261,86 @@ fieldset::-webkit-scrollbar-thumb {
 }
 
 /* end style link footer hover */
+
+/* style scroll to top */
+
+.buttonInvisible {
+  display: none;
+  opacity: 0;
+}
+
+.scroll-icon {
+  color: var(--normal-white) !important;
+}
+
+.buttonVisible {
+  position: fixed !important;
+  z-index: 999 !important;
+  bottom: 12px !important;
+  right: 1rem !important;
+  width: 40px !important;
+  height: 40px !important;
+  transition-duration: 500ms !important;
+  transition-property: opacity !important;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1) !important;
+  opacity: 1 !important;
+  transition: 0.3s background-color !important;
+  vertical-align: middle !important;
+  transform: perspective(1px) translateZ(0) !important;
+  box-shadow: 10px 10px 10px #babecc, -10px -10px 20px #ffffff;
+  border-radius: 50% !important;
+
+  &:hover {
+    background-color: var(--normal-white) !important;
+  }
+  &:hover .scroll-icon {
+    color: var(--normal-blue) !important;
+  }
+}
+
+/* end style button ScrollToTop */
+
+/* loading style */
+
+.loader {
+  width: 40px;
+  height: 40px;
+  color: var(--border-new-box-color);
+  background: conic-gradient(
+      from -45deg at top 20px left 50%,
+      #0000,
+      currentColor 1deg 90deg,
+      #0000 91deg
+    ),
+    conic-gradient(
+      from 45deg at right 20px top 50%,
+      #0000,
+      currentColor 1deg 90deg,
+      #0000 91deg
+    ),
+    conic-gradient(
+      from 135deg at bottom 20px left 50%,
+      #0000,
+      currentColor 1deg 90deg,
+      #0000 91deg
+    ),
+    conic-gradient(
+      from -135deg at left 20px top 50%,
+      #0000,
+      currentColor 1deg 90deg,
+      #0000 91deg
+    );
+  animation: l4 1.5s infinite cubic-bezier(0.3, 1, 0, 1);
+}
+@keyframes l4 {
+  50% {
+    width: 60px;
+    height: 60px;
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* end loading style */
