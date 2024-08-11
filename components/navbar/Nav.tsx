@@ -112,15 +112,8 @@ const Navbar: React.FC = () => {
     <div className="flex justify-center items-center w-full">
       <Header className={fixTop ? "fix-nav" : "class-nav"}>
         <div className="demo-logo">
-          <Link href="/">
-            <Image
-              src="/images/logo.jpg"
-              alt="logo"
-              width={50}
-              height={50}
-              quality={100}
-              className="rounded-[50%] min-h[50px] min-w[50px]"
-            />
+          <Link href="/" className="text-normalWhite">
+            LOGO
           </Link>
         </div>
         <Menu
