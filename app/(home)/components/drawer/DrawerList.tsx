@@ -24,7 +24,7 @@ const DrawerList: React.FC = () => {
         type="primary"
         size="large"
         icon={<PiListMagnifyingGlassBold size={20} />}
-        className="flex-row-reverse flex- border-2 border-normalBlue bg-transparent hover:bg-normalBlue text-normalBlue hover:text-normalWhite transition-colors duration-500"
+        className="flex-row-reverse flex- border-2 border-normalBlue bg-transparent hover:bg-normalBlue shadow-[10px_10px_10px_#babecc,-10px_-10px_20px_#ffffff] text-normalBlue hover:text-normalWhite transition-colors duration-500"
         onClick={showLoading}
       >
         مشاهده اخبار
