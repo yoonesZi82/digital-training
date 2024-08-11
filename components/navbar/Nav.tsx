@@ -123,7 +123,7 @@ const Navbar: React.FC = () => {
           className="flex justify-center items-center"
           style={{ flex: 1, minWidth: 0 }}
         />
-        <div className="flex">
+        <div className="desktop:flex laptop:flex tablet:flex hidden mobile:hidden">
           <Search placeholder="جستجو کنید..." onSearch={onSearch} enterButton />
         </div>
       </Header>
